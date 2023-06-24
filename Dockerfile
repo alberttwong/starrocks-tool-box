@@ -17,6 +17,8 @@ RUN mkdir /tools && \
     tar xvf helm-v3.12.1-linux-386.tar.gz  linux-386/helm && \
     cp oc kubectl linux-386/helm /usr/local/bin
 
+RUN curl https://dl.min.io/client/mc/release/linux-amd64/mc -o /usr/local/bin/mc
+
 USER 1001
 
 ENTRYPOINT ["/usr/local/bin/run"]
