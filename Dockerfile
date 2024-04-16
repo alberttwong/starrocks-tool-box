@@ -3,7 +3,7 @@ FROM registry.access.redhat.com/ubi9
 RUN dnf -y update && \
     dnf -y install https://repo.mysql.com//mysql80-community-release-el9-1.noarch.rpm
 
-ENV INSTALL_PKGS="git vim unzip python iputils mysql-community-server wget"
+ENV INSTALL_PKGS="git vim unzip python iputils mysql-community-server wget nc"
 
 RUN dnf -y install $INSTALL_PKGS && \
     dnf clean all
