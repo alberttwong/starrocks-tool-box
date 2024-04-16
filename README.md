@@ -9,3 +9,21 @@ docker push atwong/starrocks-tool-box:latest
 ```
 
 Published to https://hub.docker.com/r/atwong/starrocks-tool-box
+
+How to use in docker compose
+```
+  starrocks-toolkit:
+    image: atwong/starrocks-tool-box
+    hostname: starrocks-toolkit
+    container_name: starrocks-toolkit
+    volumes:
+      - ./srtooldata:/home/data
+    depends_on:
+      starrocks:
+        condition: service_healthy
+    entrypoint: >
+      /bin/sh -c "
+      mysql -P 9030 -h starrocks-fe -u root -e \"create database demo\";
+      exit 0;
+      "
+```
