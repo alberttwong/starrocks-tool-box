@@ -27,3 +27,5 @@ How to use in docker compose
       exit 0;
       "
 ```
+
+<img referrerpolicy="no-referrer-when-downgrade" src="https://static.scarf.sh/a.png?x-pxid=96b63550-7072-4fba-aef6-b4d962decebd" />
